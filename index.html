@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Hand Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video id="webcam" autoplay playsinline></video>
+
+    <div style="position: absolute; top: 30px; left: 50%;
+        transform: translateX(-50%); display: flex; justify-content: center; width: 100%; text-align: center;">
+        <div style="font-family:'PeoplefirstFightingTTF'; font-size: 100px;">
+            검지손가락으로 그려봐
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <div style="position: absolute; bottom: 10px; left: 10px; z-index: 2;">
+        <input type="color" id="colorPicker" style="display:none; position:absolute; bottom: 40px; left: 0;"> <!-- 컬러 피커 버튼 위에 위치 -->
+        <button id="colorPickerButton">색상 변경</button>
+        <button id="shapeChangeButton">모양 변경</button>
+        <button id="clearCanvas">캔버스 클리어</button> 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+    <script src="script.js"></script>
+</body>
+</html>

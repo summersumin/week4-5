@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'PeoplefirstFightingTTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-2@1.0/PeoplefirstFightingTTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+    transform: scaleX(-1);
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-family: 'PeoplefirstFightingTTF';
+    font-size: 30px;
+}
+
+#colorPicker {
+    display: none; /* 컬러 피커 숨기기 */
+}
